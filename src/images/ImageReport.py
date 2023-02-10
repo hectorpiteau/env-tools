@@ -1,3 +1,4 @@
+# This class is used to print reports on images in the console in order to debug.
 class ImageReport:
     
     @staticmethod

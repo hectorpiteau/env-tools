@@ -5,6 +5,9 @@ from ImageReport import ImageReport
 
 
 def DoG(img, lower_res = (3,3), higher_res = (5,5)):
+    """Performs Difference of Gaussian.
+    
+    """
     low_gauss = cv2.GaussianBlur(img, lower_res, 0)
     high_gauss = cv2.GaussianBlur(img, higher_res, 0)
     return low_gauss - high_gauss
@@ -12,7 +15,7 @@ def DoG(img, lower_res = (3,3), higher_res = (5,5)):
 
 def main():
     if len(sys.argv) < 2:
-        print("Please provide an image path.")
+        print("USAGE:\nPlease provide an image path as first argument.")
         return 1
 
     path = sys.argv[1]
